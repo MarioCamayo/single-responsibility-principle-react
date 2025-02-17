@@ -1,0 +1,38 @@
+Sí, separar la lógica de la UI en archivos diferentes es una excelente práctica y te ayudará a destacar en una prueba técnica. Muchas empresas valoran código modular, limpio y fácil de mantener.
+
+Si en la prueba te piden consumir una API como JSONPlaceholder, lo mejor es:
+✅ Separar la lógica de datos en un servicio (api.js o services/api.js).
+✅ Usar hooks personalizados para centralizar la lógica de datos (usePosts.js).
+✅ Mantener los componentes de UI separados (PostList.jsx).
+
+Aquí tienes una estructura realista que podrías usar en una prueba técnica:
+
+📂 Estructura del proyecto:
+
+📁 src
+ ┣ 📁 services
+ ┃ ┗ 📄 api.js  <-- Lógica de conexión con la API
+ ┣ 📁 hooks
+ ┃ ┗ 📄 usePosts.js  <-- Hook personalizado para manejar la lógica
+ ┣ 📁 components
+ ┃ ┗ 📄 PostList.jsx  <-- Componente de UI que muestra los datos
+ ┣ 📄 App.jsx
+ ┗ 📄 main.jsx
+
+
+1. Crear el servicio de la API (services/api.js)
+Aquí centralizas la lógica de conexión a la API.
+
+2. Crear el hook personalizado (hooks/usePosts.js)
+Este hook maneja la obtención de datos y el estado.
+
+3. Crear el componente de UI (components/PostList.jsx)
+Este componente solo se encarga de mostrar los datos.
+
+✅ ¿Por qué es una buena práctica?
+✔ Código modular: Separar lógica, hooks y UI mejora la organización.
+✔ Reutilizable: Puedes usar fetchPosts() en otros lugares.
+✔ Mantenible: Si la API cambia, solo editas api.js, no toda la app.
+✔ Escalable: Puedes agregar más hooks (useUsers.js, useComments.js, etc.).
+
+Si en una prueba técnica aplicas esta estructura, demostrarás que entiendes buenas prácticas y cómo se trabaja en empresas reales. ¡Te ayudará mucho en entrevistas! 🚀😃
